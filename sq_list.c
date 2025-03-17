@@ -54,9 +54,9 @@ void insert_sq_list(sq_list* list, int pos, int value)
         printf("有损插入\n");
     if (pos > list->length && pos <= MAX)
         printf("不建议在此处插入");
-    int i = list->length;
+    int i = list->length -1;
     int flog = i;
-    for (i; i > pos; i--)
+    for (i; i >= pos-1; i--)
     {
         list->data[i + 1] = list->data[i];
     }
