@@ -6,61 +6,111 @@
 ## 示例
 `linked_list.h`:
   ```c
-  #ifndef LINKED_LIST_H
+#ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
+#include <stdbool.h>
+
+// 链表节点结构体
 typedef struct Node {
     int data;
     struct Node* next;
 } Node;
 
-Node* createNode(int data);
-void insertNode(Node** head, int data);
-void deleteNode(Node** head, int data);
-void printList(Node* head);
+// 链表操作函数声明
+Node* create_node(int data);
+void append_node(Node** head, int data);
+bool delete_node(Node** head, int data);
+void print_list(const Node* head);
+void free_list(Node** head);
 
-#endif
+#endif // LINKED_LIST_H
+
 ```
 
 `linked_list.c`:
   ```c
-  #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "linked_list.h"
 
-Node* createNode(int data) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
-    newNode->data = data;
-    newNode->next = NULL;
-    return newNode;
-}
-
-void insertNode(Node** head, int data) {
-    Node* newNode = createNode(data);
-    newNode->next = *head;
-    *head = newNode;
-}
-
-void deleteNode(Node** head, int data) {
-    Node* temp = *head, *prev = NULL;
-    while (temp != NULL && temp->data != data) {
-        prev = temp;
-        temp = temp->next;
+// 创建新节点
+Node* create_node(int data) {
+    Node* new_node = (Node*)malloc(sizeof(Node));
+    if (!new_node) {
+        fprintf(stderr, "内存分配失败\n");
+        exit(EXIT_FAILURE);
     }
-    if (temp == NULL) return;
-    if (prev) prev->next = temp->next;
-    else *head = temp->next;
-    free(temp);
+    new_node->data = data;
+    new_node->next = NULL;
+    return new_node;
 }
 
-void printList(Node* head) {
-    Node* temp = head;
-    while (temp) {
-        printf("%d -> ", temp->data);
-        temp = temp->next;
+// 在链表末尾添加节点
+void append_node(Node** head, int data) {
+    Node* new_node = create_node(data);
+    if (*head == NULL) {
+        *head = new_node;
+        return;
+    }
+    Node* current = *head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    current->next = new_node;
+}
+
+// 删除包含指定数据的节点
+bool delete_node(Node** head, int data) {
+    if (*head == NULL) {
+        return false;
+    }
+    Node* current = *head;
+    Node* previous = NULL;
+
+    // 查找要删除的节点
+    while (current != NULL && current->data != data) {
+        previous = current;
+        current = current->next;
+    }
+
+    // 未找到节点
+    if (current == NULL) {
+        return false;
+    }
+
+    // 删除节点
+    if (previous == NULL) {
+        // 要删除的是头节点
+        *head = current->next;
+    } else {
+        previous->next = current->next;
+    }
+    free(current);
+    return true;
+}
+
+// 打印链表
+void print_list(const Node* head) {
+    const Node* current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
     }
     printf("NULL\n");
 }
+
+// 释放链表内存
+void free_list(Node** head) {
+    Node* current = *head;
+    while (current != NULL) {
+        Node* next = current->next;
+        free(current);
+        current = next;
+    }
+    *head = NULL;
+}
+
 ```
 `main.c`:
 ```c
