@@ -60,6 +60,7 @@ void insert_sq_list(sq_list* list, int pos, int value)
     {
         list->data[i + 1] = list->data[i];
     }
+    list->data[pos] = value;
     if (flog + 1 > list->length)
         list->length++;
 }

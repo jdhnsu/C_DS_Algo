@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="linked_list.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="sq_list.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linked_list.h" />
     <ClInclude Include="sq_list.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
