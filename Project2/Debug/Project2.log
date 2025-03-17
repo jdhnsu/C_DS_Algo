@@ -1,4 +1,4 @@
 ﻿  main.c
-  sq_list.c
-  正在生成代码...
+C:\code\lencode\Project2\main.c(9,34): warning C4047: “函数”:“sq_list *”与“sq_list **”的间接级别不同
+C:\code\lencode\Project2\main.c(9,34): warning C4024: “init_sq_list”: 形参和实参 1 的类型不同
   Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe
