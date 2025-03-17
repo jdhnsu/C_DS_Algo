@@ -6,7 +6,8 @@
 int main(void)
 {
 
-    
+    sq_list list;
+    init_sq_list(&list);
     printf("Hello World!\n");
     return 0;
 }

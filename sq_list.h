@@ -9,10 +9,10 @@ typedef struct sq_list
 } sq_list;
 
 // ³õÊ¼»¯
-sq_list* init_sq_list(sq_list* name);
+sq_list* init_sq_list(sq_list* list);
 
 // É¾³ı
-void delete_sq_list(sq_list* list);
+void delete_sq_list(sq_list* list, int pos);
 
 // Ìæ»»
 void replace_sq_list(sq_list* list, int pos, int value);
