@@ -1,3 +1,4 @@
-﻿  sq_list.c
-C:\code\lencode\Project2\sq_list.c(10,1): warning C4716: “init_sq_list”: 必须返回一个值
+﻿  linked_list.c
+C:\code\lencode\Project2\linked_list.c(31,24): warning C4028: 形参 1 与声明不同
+C:\code\lencode\Project2\linked_list.c(59,2): warning C4047: “return”:“address_node *”与“int”的间接级别不同
   Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe

@@ -7,6 +7,13 @@ typedef struct node
     struct node* next;
 } node;
 
+typedef struct address_node
+{
+    int n;
+    node* p;
+}address_node;
+
+
 // 初始化节点
 node* init_node(int val);
 
@@ -23,9 +30,10 @@ void insert_node(node** head, int val);
 int get_node(node* n);
 
 // 查找
-int find_node(node* head, int val);
+address_node *find_node(node* head, int val);
 
-
+// 打印链表
+void print_node_list(node* head);
 
 #endif 
 
