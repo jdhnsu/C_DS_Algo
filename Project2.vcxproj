@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="sq_list.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sq_list.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,13 +133,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="L:\Documents\GitHub\learn_code\main.c" />
-    <ClCompile Include="L:\Documents\GitHub\learn_code\sq_list.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="L:\Documents\GitHub\learn_code\sq_list.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

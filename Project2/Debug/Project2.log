@@ -1,10 +1,4 @@
 ﻿  main.c
   sq_list.c
-L:\Documents\GitHub\learn_code\sq_list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“L:/Documents/GitHub/learn_code/main.c”)
-  
-L:\Documents\GitHub\learn_code\sq_list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“L:/Documents/GitHub/learn_code/sq_list.c”)
-  
   正在生成代码...
-L:\Documents\GitHub\learn_code\main.c(9,1): error C4700: 使用了未初始化的局部变量“list”
+  Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe
