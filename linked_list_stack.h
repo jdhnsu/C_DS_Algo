@@ -1,1 +1,43 @@
-#pragma once
+#ifndef LINKED_LIST_STACK_H
+#define LINKED_LIST_STACK_H
+
+typedef struct stack_node
+{
+	int value;
+	struct stack_node *next;
+
+}stack_node;
+
+typedef struct stack_linked
+{
+	  stack_node *top;
+	  int size;
+}stack_linked;
+
+// ≥ı º’ª
+stack_linked* init_stack_linked(void);
+
+// »Î’ª
+void push_stack_linked(stack_linked* s, int value);
+
+// ≥ˆ’ª
+int pop_stack_linked(stack_linked* s);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif 
