@@ -9,7 +9,7 @@ typedef struct sq_list
 } sq_list;
 
 // ³õÊ¼»¯
-sq_list* init_sq_list(sq_list* list);
+sq_list *init_sq_list(void);
 
 // É¾³ı
 void delete_sq_list(sq_list* list, int pos);
