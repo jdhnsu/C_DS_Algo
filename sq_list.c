@@ -7,6 +7,7 @@ sq_list* init_sq_list(void)
 {
    sq_list* name = (sq_list*)malloc(sizeof(sq_list));
     memset(name, 0, sizeof(sq_list));
+    return 0;
 }
 
 // É¾³ý
