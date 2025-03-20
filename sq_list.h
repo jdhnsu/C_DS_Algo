@@ -2,6 +2,7 @@
 #define SQ_LIST_H
 #define MAX 100
 
+
 typedef struct sq_list
 {
     int data[MAX];
@@ -22,6 +23,9 @@ void insert_sq_list(sq_list* list, int pos, int value);
 
 // 打印
 void print_sq_list(sq_list* list);
+
+// 合并顺序表
+void merge_sq_list(sq_list* list_1, sq_list* list_2);
 
 #endif
 
