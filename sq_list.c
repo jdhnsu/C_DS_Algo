@@ -63,7 +63,7 @@ void insert_sq_list(sq_list* list, int pos, int value)
         list->data[i + 1] = list->data[i];
     }
     list->data[pos] = value;
-    if (flog + 1 > list->length)
+   /* if (flog + 1 > list->length)*/
         list->length++;
 }
 
@@ -158,18 +158,11 @@ void mer_ge_sq_list(sq_list* list_1, sq_list* list_2)
 {
     int e;
     int k = 0;
-    for (int k=0;k < list_2->length;k++);
+    for (int k=0;k < list_2->length;k++)
     {
-        get_sq_list(list_2,k,&e);
-        if(!locate_list(list_1,list_2))
-          insert_sq_list(list_1,list_1->length, e);
-
-
-
-
+        get_sq_list(list_2, k, &e);
+        if (!locate_list(list_1, list_2))
+            insert_sq_list(list_1, list_1->length, e);
     }
-
-
-
 }
 

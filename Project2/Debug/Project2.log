@@ -1,1 +1,8 @@
-﻿  Project2.vcxproj -> C:\Users\段宇宸\Documents\GitHub\Project2\Debug\Project2.exe
+﻿  sq_list.c
+C:\code\lencode\Project2\sq_list.c(94,37): warning C4028: 形参 2 与声明不同
+C:\code\lencode\Project2\sq_list.c(100,9): warning C4033: “locate_list”必须返回值
+C:\code\lencode\Project2\sq_list.c(104,27): warning C4047: “==”:“int”与“int *”的间接级别不同
+C:\code\lencode\Project2\sq_list.c(110,9): warning C4033: “locate_list”必须返回值
+C:\code\lencode\Project2\sq_list.c(164,34): warning C4133: “函数”: 从“sq_list *”到“int *”的类型不兼容
+C:\code\lencode\Project2\sq_list.c(114,1): warning C4715: “locate_list”: 不是所有的控件路径都返回值
+  Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe
