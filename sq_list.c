@@ -27,6 +27,7 @@ void delete_sq_list(sq_list* list,int pos)
         list->data[list->length - 1] = 0;
     }
     list->length--;
+
 }
 
 // 替换
@@ -79,6 +80,43 @@ void print_sq_list(sq_list* list)
     printf("\n");
 }
 
+//获得元素
+void get_sq_list(sq_list* list1, int pos, int*e)
+{
+    if (list1->length == 0 || pos<0 || pos>list1->length)
+    {
+        printf("获取元素失败");
+        return;
+     }
+    *e = list1->data[pos];
+    return;
+}
+
+//查找
+int locate_list(sq_list* list, int *e)
+{
+    int i = 0;
+    if (list->length == 0)
+    {
+        printf("表长为空");
+        return;
+    }
+    for (i = 0;i < list->length;i++)
+    {
+        if (list->data[i] == e)
+            return 1;
+    }
+    if (i > list->length)
+    {
+        printf("越界错误");
+        return;
+    }
+    return 0;
+        
+}
+
+
+
 // 2 到 1
 void merge_sq_list(sq_list* list_1, sq_list* list_2)
 {
@@ -118,3 +156,17 @@ void merge_sq_list(sq_list* list_1, sq_list* list_2)
 //continue;
 //else if (list_1->data[j] == list_2->data[i])
 //break;
+
+//合并2.0
+void mer_ge_sq_list(sq_list* list_1, sq_list* list_2)
+{
+    int e;
+    int k = 0;
+    for (int k=0;k < list_2->length;k++)
+    {
+        get_sq_list(list_2, k, &e);
+        if (!locate_list(list_1, list_2))
+            insert_sq_list(list_1, list_1->length, e);
+    }
+}
+
