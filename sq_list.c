@@ -72,8 +72,10 @@ void insert_sq_list(sq_list* list, int pos, int value)
 // 打印
 void print_sq_list(sq_list* list)
 {
+    printf("[");
     for (int i = 0; i < list->length; i++)
         printf("%d ", list->data[i]);
+    printf("]");
     printf("\n");
 }
 
@@ -107,7 +109,9 @@ void merge_sq_list(sq_list* list_1, sq_list* list_2)
         }
         
     }
+    printf("----------------------------------\n");
     printf("有%d相同 有%d不相同\n", flog, list_2->length - flog);
+    printf("----------------------------------\n");
 }
 
 //if (list_1->data[j] != list_2->data[i])
