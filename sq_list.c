@@ -80,36 +80,37 @@ void print_sq_list(sq_list* list)
 // 2 到 1
 void merge_sq_list(sq_list* list_1, sq_list* list_2)
 {
-    if (list_1->data == 0 || list_2->length == 0)
+    if (list_1->length == 0 || list_2->length == 0)
     {
         printf("有一个空表\n");
         return;
     }
-    if ((list_1->length + list_1->length) > MAX)
+    if ((list_1->length + list_2->length) > MAX)
         printf("总和超范围\n但是会继续合并只不过可能为有损合并\n");
-    int flog = list_2->length;
+    int flog = 0;
     for (int i = 0; i < list_2->length; i++)
     {
         
-        for (int j = 0; j < list_1->length; j++) {
+        for (int j = 0; j < list_1->length; j++) 
+        {
             if (list_1->data[j] != list_2->data[i])
                 continue;
-            else if (list_1->data[j] != list_2->data[i])
-                break;
+            else if (list_1->data[j] == list_2->data[i])
+            {
+                flog++; break;
+            }
             else
             {
                 list_1->data[list_1->length] = list_2->data[i];
                 list_1->length++;
-                flog--;
-                break;
             }
         }
         
     }
-    printf("有%d不相同 有%d相同\n", flog, list_2->length - flog);
+    printf("有%d相同 有%d不相同\n", flog, list_2->length - flog);
 }
 
-/*ist_1->data[list_1->length] = list_2->data[i];
-list_1->length++;
-flog--;
-break;*/
+//if (list_1->data[j] != list_2->data[i])
+//continue;
+//else if (list_1->data[j] == list_2->data[i])
+//break;
