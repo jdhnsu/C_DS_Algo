@@ -12,7 +12,7 @@ int main(void)
     sq_list* N = init_sq_list();
     for (int i = 1; i <= 3; i++)
     {
-        N->data[i - 1] = i;
+        N->data[i - 1] = i+10;
     }
     for (int i = 1; i <= 10; i++)
     {
@@ -23,8 +23,8 @@ int main(void)
     print_sq_list(N);
     print_sq_list(L);
     merge_sq_list(N,L);
-    print_sq_list(L);
-    printf("L->length:[%d]\n", L->length);
+    print_sq_list(N);
+    printf("L->length:[%d]\n", N->length);
     printf("Hello World!\n");
     system("pause");
     return 0;
