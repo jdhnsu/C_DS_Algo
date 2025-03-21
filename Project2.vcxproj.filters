@@ -27,6 +27,9 @@
     <ClCompile Include="sq_list.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="array_stack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sq_list.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="linked_list_stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="array_stack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

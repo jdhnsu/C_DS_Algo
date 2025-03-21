@@ -6,6 +6,11 @@
 stack_linked* init_stack_linked(void)
 {
 	stack_linked* s = (stack_linked*)malloc(sizeof(stack_linked));
+	if (s == NULL)
+	{
+		printf("ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+		return NULL;
+	}
 	s->top = NULL;
 	s->size = 0;
 	return s;
@@ -15,6 +20,11 @@ stack_linked* init_stack_linked(void)
 void push_stack_linked(stack_linked* s, elem_type value)
 {
 	stack_node* node = (stack_node*)malloc(sizeof(stack_node));
+	if (node == NULL)
+	{
+		printf("ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+		return NULL;
+	}
 	node->value = value;
 	node->next = s->top;
 	s->top = node;
