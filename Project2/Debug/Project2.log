@@ -1,2 +1,9 @@
-﻿  main.c
+﻿  linked_list_stack.c
+  sq_list.c
+C:\code\lencode\Project2\sq_list.c(102,9): warning C4033: “locate_list”必须返回值
+C:\code\lencode\Project2\sq_list.c(112,9): warning C4033: “locate_list”必须返回值
+C:\code\lencode\Project2\sq_list.c(166,34): warning C4047: “函数”:“int”与“sq_list *”的间接级别不同
+C:\code\lencode\Project2\sq_list.c(166,34): warning C4024: “locate_list”: 形参和实参 2 的类型不同
+  正在生成代码...
+C:\code\lencode\Project2\sq_list.c(116,1): warning C4715: “locate_list”: 不是所有的控件路径都返回值
   Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe

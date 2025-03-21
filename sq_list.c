@@ -31,7 +31,7 @@ void delete_sq_list(sq_list* list,int pos)
 }
 
 // 替换
-void replace_sq_list(sq_list* list, int pos, int value)
+void replace_sq_list(sq_list* list, int pos, elem_type value)
 {
     if (pos < 0 || pos > list->length || list->length >= MAX)
     {
@@ -45,7 +45,7 @@ void replace_sq_list(sq_list* list, int pos, int value)
 
 
 // 插入
-void insert_sq_list(sq_list* list, int pos, int value)
+void insert_sq_list(sq_list* list, int pos, elem_type value)
 {
     if (pos < 0 || pos > list->length || list->length >= MAX)
     {
@@ -81,7 +81,7 @@ void print_sq_list(sq_list* list)
 }
 
 //获得元素
-void get_sq_list(sq_list* list1, int pos, int*e)
+void get_sq_list(sq_list* list1, int pos, elem_type*e)
 {
     if (list1->length == 0 || pos<0 || pos>list1->length)
     {
@@ -93,7 +93,7 @@ void get_sq_list(sq_list* list1, int pos, int*e)
 }
 
 //查找
-int locate_list(sq_list* list, int *e)
+int locate_list(sq_list* list, elem_type e)
 {
     int i = 0;
     if (list->length == 0)
@@ -122,7 +122,7 @@ void merge_sq_list(sq_list* list_1, sq_list* list_2)
 {
     if (list_1->length == 0 || list_2->length == 0)
     {
-        printf("有一个空表\n");
+        printf("至少有一个空表\n");
         return;
     }
     if ((list_1->length + list_2->length) > MAX)

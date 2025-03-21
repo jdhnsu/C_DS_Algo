@@ -12,7 +12,7 @@ stack_linked* init_stack_linked(void)
 }
 
 // ÈëÕ»
-void push_stack_linked(stack_linked* s, int value)
+void push_stack_linked(stack_linked* s, elem_type value)
 {
 	stack_node* node = (stack_node*)malloc(sizeof(stack_node));
 	node->value = value;
