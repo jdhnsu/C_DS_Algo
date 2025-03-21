@@ -22,9 +22,9 @@ int main(void)
     L->length = 10;
     print_sq_list(N);
     print_sq_list(L);
-    merge_sq_list(N,L);
-    print_sq_list(N);
-    printf("L->length:[%d]\n", N->length);
+    mer_ge_sq_list(L,N);
+    print_sq_list(L);
+    printf("L->length:[%d]\n", L->length);
     printf("Hello World!\n");
     system("pause");
     return 0;

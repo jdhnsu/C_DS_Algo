@@ -64,7 +64,7 @@ void insert_sq_list(sq_list* list, int pos, int value)
     }
     list->data[pos] = value;
    /* if (flog + 1 > list->length)*/
-        list->length++;
+    list->length++;
 }
 
 
@@ -117,7 +117,7 @@ int locate_list(sq_list* list, int *e)
 
 
 
-// 2 到 1
+// 2 到 1   合并
 void merge_sq_list(sq_list* list_1, sq_list* list_2)
 {
     if (list_1->length == 0 || list_2->length == 0)
@@ -152,21 +152,25 @@ void merge_sq_list(sq_list* list_1, sq_list* list_2)
     printf("----------------------------------\n");
 }
 
-//if (list_1->data[j] != list_2->data[i])
-//continue;
-//else if (list_1->data[j] == list_2->data[i])
-//break;
+
 
 //合并2.0
 void mer_ge_sq_list(sq_list* list_1, sq_list* list_2)
 {
     int e;
     int k = 0;
+    int flog = 0;
     for (int k=0;k < list_2->length;k++)
     {
         get_sq_list(list_2, k, &e);
         if (!locate_list(list_1, list_2))
+        {
             insert_sq_list(list_1, list_1->length, e);
+            flog++;
+        } 
     }
+    printf("----------------------------------\n");
+    printf("有%d不相同 有%d相同\n", flog, list_2->length - flog);
+    printf("----------------------------------\n");
 }
 
