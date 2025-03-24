@@ -42,11 +42,11 @@ int main(void)
     push_array_queue(q,2);
     print_array_queue(q);
     printf("---------------------\n");
-   /* pop_array_queue(q);
+    pop_array_queue(q);
     print_array_queue(q);
     printf("----------\n");
     push_array_queue(q, 666);
-    print_array_queue(q);*/
+    print_array_queue(q);
     printf("Hello World!\n");
     system("pause");
     return 0;

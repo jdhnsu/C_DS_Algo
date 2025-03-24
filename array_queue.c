@@ -73,7 +73,7 @@ void print_array_queue(array_queue *q)
             printf("error :\n");
             return ;
         }
-    for (int i=q->front;i<q->size;i++)
+    for (int i=0;i<q->size;i++)
         {
             printf("[");
             printf("%d ",q->data[i%MAX_QUEUE]);
