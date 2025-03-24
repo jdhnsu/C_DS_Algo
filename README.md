@@ -84,6 +84,7 @@ cd C_DS_Algo
 - [GitHub Desktop 汉化工具](https://github.com/robotze/GithubDesktopZhTool) （记得给项目点个赞！）
 
 ### 2. 添加新的数据结构或算法模块
+- 工具说明:默认使用 *Visual Studio 2022 IDE*,克隆项目后，点击项目文件`Project2.sln`就可以开始编辑了。如果使用其它方式推荐使用`CMake`工具编译项目。
 - 创建一个新的头文件（如`new_module.h`）和源文件（如`new_module.c`）。
 - 在头文件中声明结构体和函数接口。
 - 在源文件中实现这些函数的功能。
@@ -178,4 +179,12 @@ cd C_DS_Algo
    - 在`main.c`中验证栈模块的功能。（无需提交`main.c`文件）
    - 提交时记得详细说明你的更改。
 
----
+## 文件结构
+```
+C_DS_Algo/
+├── (一些日志文件和git配置(忽略))
+├── README.md
+├── linked_list.h
+├── linked_list.c
+└── main.c
+```
