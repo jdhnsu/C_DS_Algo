@@ -6,6 +6,11 @@
 node* init_node(elem_type value)
 {
 	node* new_node = (node*)malloc(sizeof(node));
+	if (new_node == NULL)
+	{
+		printf("error: malloc failed\n");
+		return NULL;
+	}
 	new_node->value = value;
 	new_node->next = NULL;
 	return new_node;
