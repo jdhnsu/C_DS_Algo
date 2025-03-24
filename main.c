@@ -3,6 +3,7 @@
 #include <string.h>
 #include "array_stack.h"
 #include "sq_list.h"
+#include "array_queue.h"
 
 int main(void)
 {
@@ -27,13 +28,23 @@ int main(void)
     //print_sq_list(L);
     //printf("L->length:[%d]\n", L->length);
 
-
-    // Õ»²âÊÔ
+/* 
+    // Õ»ï¿½ï¿½ï¿½ï¿½
     array_stack* stack = init_array_stack();
     push_array_stack(stack, 1);
     push_array_stack(stack, 2);
-    push_array_stack(stack, 3);
-    print_array_stack(stack);
+    push_array_stack(stack, 3); */
+    array_queue *q = init_array_queue();
+    push_array_queue(q,0);
+    push_array_queue(q,1);
+    push_array_queue(q,2);
+    print_array_queue(q);
+    printf("---------------------\n");
+    pop_array_queue(q);
+    print_array_queue(q);
+    printf("----------\n");
+    push_array_queue(q, 666);
+    print_array_queue(q);
     printf("Hello World!\n");
     system("pause");
     return 0;
