@@ -6,6 +6,11 @@
 sq_list* init_sq_list(void)
 {
    sq_list* name = (sq_list*)malloc(sizeof(sq_list));
+    if (name == NULL)
+    {
+        printf("error: malloc failed![From init_sq_list]\n");
+        return NULL;
+    }
     memset(name, 0, sizeof(sq_list));
     return name;
 }
