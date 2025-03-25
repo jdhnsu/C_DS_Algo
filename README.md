@@ -114,7 +114,7 @@ cd C_DS_Algo
 
 ### 4. 提出建议或问题
 
-如果你有任何建议或遇到问题，欢迎在[Issues](https://github.com/jdhnsu/C_DS_Algo/issues)中提出,[wiki]([Home · jdhnsu/C\_DS\_Algo Wiki · GitHub](https://github.com/jdhnsu/C_DS_Algo/wiki)) 中也有许多代码讲解可以查看.
+如果你有任何建议或遇到问题，欢迎在[Issues](https://github.com/jdhnsu/C_DS_Algo/issues)中提出,[wiki](https://github.com/jdhnsu/C_DS_Algo/wiki)) 中也有许多代码讲解可以查看.
 
 ## 示例：添加一个新的模块
 
