@@ -1,9 +1,11 @@
 # 数据结构与算法练习代码
 
 ## 项目目标
+
 本项目旨在通过C语言实现本学期所学的所有数据结构和算法，以提升编码能力、加深对数据结构和算法的理解，并培养良好的编程习惯。通过实际编写代码，我们将逐步构建一个完整的数据结构与算法库，为后续的软件开发和学习打下坚实的基础。
 
 ## 项目结构说明
+
 项目采用模块化设计，每个数据结构或算法模块都独立封装，便于管理和复用。具体结构如下：
 
 - **`main.c`**：主程序文件，用于测试和调用其他模块的功能。它是整个项目的入口，通过它来运行和验证各个数据结构和算法模块的实现。
@@ -13,12 +15,15 @@
 在编写被调用模块的代码时，首先需要在对应的头文件中声明结构体和函数，明确模块的接口；然后在对应的源文件中实现这些函数的功能。这种分离接口和实现的方式，不仅有助于代码的组织和管理，还便于后续的维护和扩展。例如，如果需要修改某个模块的内部实现，只需修改其源文件，而无需修改头文件和主程序文件，只要保持接口不变，不会影响其他模块的正常调用。
 
 ## 示例代码
+
 以下是一个简单的示例，展示如何组织代码和实现功能。
 
 ### 简化示例代码
+
 以下是一个简单的“Hello, World!”示例，展示如何在项目中添加一个新的模块。
 
 #### `hello_world.h`
+
 ```c
 #ifndef HELLO_WORLD_H
 #define HELLO_WORLD_H
@@ -29,6 +34,7 @@ void print_hello_world();
 ```
 
 #### `hello_world.c`
+
 ```c
 #include "hello_world.h"
 #include <stdio.h>
@@ -39,6 +45,7 @@ void print_hello_world() {
 ```
 
 #### 在`main.c`中调用
+
 ```c
 #include "hello_world.h"
 
@@ -49,7 +56,9 @@ int main() {
 ```
 
 ## 知识补充
+
 ### 头文件保护符
+
 在C语言中，头文件（`.h`文件）通常使用预处理指令`#ifndef`、`#define`和`#endif`来防止头文件被重复包含，避免编译错误。这种技术被称为**头文件保护符**或**包含卫士**。
 
 **工作原理：**
@@ -69,21 +78,29 @@ int main() {
 通过使用头文件保护符，可以有效防止头文件的重复包含，确保代码的正确编译。
 
 ### 命名规范
+
 为了保持代码的一致性和可读性，本项目统一使用**小写下划线命名法**。例如，变量名和函数名使用`variable_name`和`function_name`的形式，宏定义使用`MACRO_NAME`的形式。
 
 ## 如何参与项目
+
 ### 1. 克隆项目
+
 #### 方式1：直接克隆
+
 ```bash
 git clone https://github.com/jdhnsu/C_DS_Algo.git
 cd C_DS_Algo
 ```
+
 #### 方式2（推荐）：
+
 使用`GitHub Desktop`客户端克隆项目，并在本地创建分支。
+
 - [GitHub Desktop 下载](https://desktop.github.com/download/)
 - [GitHub Desktop 汉化工具](https://github.com/robotze/GithubDesktopZhTool) （记得给项目点个赞！）
 
 ### 2. 添加新的数据结构或算法模块
+
 - 工具说明:默认使用 *Visual Studio 2022 IDE*,克隆项目后，点击项目文件`Project2.sln`就可以开始编辑了。如果使用其它方式推荐使用`CMake`工具编译项目。
 - 创建一个新的头文件（如`new_module.h`）和源文件（如`new_module.c`）。
 - 在头文件中声明结构体和函数接口。
@@ -91,16 +108,20 @@ cd C_DS_Algo
 - 在`main.c`中调用新模块的功能，验证其正确性。
 
 ### 3. 提交代码
+
 - 提交你的代码到你的分支。
 - 创建一个Pull Request，详细描述你的更改和新增功能。
 
 ### 4. 提出建议或问题
-如果你有任何建议或遇到问题，欢迎在[Issues](https://github.com/jdhnsu/C_DS_Algo/issues)中提出。
+
+如果你有任何建议或遇到问题，欢迎在[Issues](https://github.com/jdhnsu/C_DS_Algo/issues)中提出,[wiki]([Home · jdhnsu/C\_DS\_Algo Wiki · GitHub](https://github.com/jdhnsu/C_DS_Algo/wiki)) 中也有许多代码讲解可以查看.
 
 ## 示例：添加一个新的模块
+
 假设我们要添加一个栈模块，以下是步骤：
 
 1. **创建头文件`stack.h`**
+
    ```c
    #ifndef STACK_H
    #define STACK_H
@@ -119,8 +140,8 @@ cd C_DS_Algo
 
    #endif // STACK_H
    ```
-
 2. **创建源文件`stack.c`**
+
    ```c
    #include "stack.h"
    #include <stdlib.h>
@@ -159,8 +180,8 @@ cd C_DS_Algo
        free(stack);
    }
    ```
-
 3. **在`main.c`中调用栈模块**
+
    ```c
    #include "stack.h"
 
@@ -173,13 +194,14 @@ cd C_DS_Algo
        return 0;
    }
    ```
-
 4. **提交代码**
+
    - 提交你的`stack.h`和`stack.c`文件。
    - 在`main.c`中验证栈模块的功能。（无需提交`main.c`文件）
    - 提交时记得详细说明你的更改。
 
 ## 文件结构
+
 ```
 C_DS_Algo/
 ├── (一些日志文件和git配置(忽略))
