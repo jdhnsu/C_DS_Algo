@@ -36,5 +36,11 @@ address_node *find_node(node* head, elem_type value);
 // 打印链表
 void print_node_list(node* head);
 
+// get length of linked list
+int get_node_list(node* head);
+
+// 获的
+elem_type get_node_value(node* head,int pos,elem_type value);
+
 #endif 
 

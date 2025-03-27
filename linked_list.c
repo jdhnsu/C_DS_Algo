@@ -77,3 +77,29 @@ void print_node_list(node* head)
 		printf("%d ", head->value);
 	}
 }
+
+// 获得链表长度
+int get_node_list(node* head)
+{
+	int i = 0;
+	while (head->next != NULL)
+	{
+		head = head->next;
+		i++;
+	}
+	printf("链表长度为%d\n", i);
+	return i;
+}
+
+
+// 获得元素
+elem_type get_node_value(node* head,int pos,elem_type value)
+{
+	int i = 1;
+	while (i <= pos)
+	{
+		head = head->next;
+		i++;
+	}
+	return head->value;
+}

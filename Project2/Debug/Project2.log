@@ -1,25 +1,25 @@
 ﻿  array_queue.c
-C:\code\lencode\Project2\array_queue.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-C:\code\lencode\Project2\array_queue.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  array_stack.c
+C:\code\lencode\C_DS_Algo\array_queue.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\code\lencode\C_DS_Algo\array_queue.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“array_queue.c”)
   
-C:\code\lencode\Project2\array_queue.c(22,5): warning C4013: “memset”未定义；假设外部返回 int
-  array_stack.c
-C:\code\lencode\Project2\array_stack.c(12,5): warning C4013: “memset”未定义；假设外部返回 int
+C:\code\lencode\C_DS_Algo\array_queue.c(22,5): warning C4013: “memset”未定义；假设外部返回 int
+C:\code\lencode\C_DS_Algo\array_stack.c(12,5): warning C4013: “memset”未定义；假设外部返回 int
   linked_list.c
   linked_list_stack.c
-C:\code\lencode\Project2\linked_list_stack.c(26,3): warning C4098: “push_stack_linked”:“void”函数返回值
+C:\code\lencode\C_DS_Algo\linked_list_stack.c(26,3): warning C4098: “push_stack_linked”:“void”函数返回值
   main.c
-C:\code\lencode\Project2\array_queue.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\code\lencode\C_DS_Algo\array_queue.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“main.c”)
   
-C:\code\lencode\Project2\main.c(39,22): warning C4013: “init_array_queue”未定义；假设外部返回 int
-C:\code\lencode\Project2\main.c(39,18): warning C4047: “初始化”:“array_queue *”与“int”的间接级别不同
+C:\code\lencode\C_DS_Algo\main.c(39,22): warning C4013: “init_array_queue”未定义；假设外部返回 int
+C:\code\lencode\C_DS_Algo\main.c(39,18): warning C4047: “初始化”:“array_queue *”与“int”的间接级别不同
   sq_list.c
-C:\code\lencode\Project2\sq_list.c(102,9): warning C4033: “locate_list”必须返回值
-C:\code\lencode\Project2\sq_list.c(112,9): warning C4033: “locate_list”必须返回值
-C:\code\lencode\Project2\sq_list.c(166,34): warning C4047: “函数”:“int”与“sq_list *”的间接级别不同
-C:\code\lencode\Project2\sq_list.c(166,34): warning C4024: “locate_list”: 形参和实参 2 的类型不同
+C:\code\lencode\C_DS_Algo\sq_list.c(107,9): warning C4033: “locate_list”必须返回值
+C:\code\lencode\C_DS_Algo\sq_list.c(117,9): warning C4033: “locate_list”必须返回值
+C:\code\lencode\C_DS_Algo\sq_list.c(171,34): warning C4047: “函数”:“int”与“sq_list *”的间接级别不同
+C:\code\lencode\C_DS_Algo\sq_list.c(171,34): warning C4024: “locate_list”: 形参和实参 2 的类型不同
   正在生成代码...
-C:\code\lencode\Project2\sq_list.c(116,1): warning C4715: “locate_list”: 不是所有的控件路径都返回值
-  Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe
+C:\code\lencode\C_DS_Algo\sq_list.c(121,1): warning C4715: “locate_list”: 不是所有的控件路径都返回值
+  Project2.vcxproj -> C:\code\lencode\C_DS_Algo\Debug\Project2.exe
