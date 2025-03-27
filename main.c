@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "array_stack.h"
-#include "sq_list.h"
-#include "array_queue.h"
+#include "linked_list.h"
 
 int main(void)
 {
@@ -36,7 +34,7 @@ int main(void)
 
 
 
-    array_queue *q = init_array_queue();
+   /* array_queue *q = init_array_queue();
     push_array_queue(q,0);
     push_array_queue(q,1);
     push_array_queue(q,2);
@@ -46,7 +44,23 @@ int main(void)
     print_array_queue(q);
     printf("----------\n");
     push_array_queue(q, 666);
-    print_array_queue(q);
+    print_array_queue(q);*/
+
+   node* q1 = init_node(1);
+   node* q2 = init_node(2);
+   node* q3 = init_node(3);
+   node* q4 = init_node(4);
+   q1->next = q2;
+   q2->next = q3;
+   q3->next = q4;
+   //address_node *n =  find_node(q1, 3);
+   // printf("%d\n %p\n", n->n,n->p
+   //int e = get_node_list(q1);
+   node* q2_3 = init_node(0);
+   insert_node(q2, q2_3);
+   print_node_list(q1);
+   delete_node(q2);
+   print_node_list(q1);
     printf("Hello World!\n");
     system("pause");
     return 0;

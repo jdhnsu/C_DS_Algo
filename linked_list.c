@@ -33,10 +33,9 @@ void replace_node(node* n, elem_type value)
 }
 
 // 插入节点
-void insert_node(node* head, elem_type value)
+void insert_node(node* head,node *new_node)
 {
-	node* new_node = init_node(value);
-	new_node->next = head->next->next;
+	new_node->next = head->next;
 	head->next = new_node;
 }
 
@@ -54,14 +53,16 @@ address_node *find_node(node* head, elem_type value)
 		printf("内存分配失败\n");
 		return NULL;
 	}
-	n->n = 0;
-	n->p = head;
-	while (head != NULL) 
+	n->n = 1;
+	n->p = head->next;
+	node *temp = head;
+	while (temp->next != NULL) 
 	{
-		if (head->value == value)
+		if (temp->value == value)
 			return n;
 		n->n += 1;
-		head = head->next;
+		temp = temp->next;
+		n->p = temp;
 	}
 	printf("无法找到节点\n");
 	free(n);
@@ -71,20 +72,24 @@ address_node *find_node(node* head, elem_type value)
 // 打印链表
 void print_node_list(node* head)
 {
-	while (head->next != NULL)
+	node* head_1 = head;
+	printf("[%d ",head_1->value);
+	while (head_1->next != NULL)
 	{
-		head = head->next;
-		printf("%d ", head->value);
+		head_1 = head_1->next;
+		printf("%d ", head_1->value);
 	}
+	printf("]\n");
 }
 
 // 获得链表长度
 int get_node_list(node* head)
 {
-	int i = 0;
-	while (head->next != NULL)
+	node *head_1 = head;
+	int i = 1;
+	while (head_1->next != NULL)
 	{
-		head = head->next;
+		head_1 = head_1->next;
 		i++;
 	}
 	printf("链表长度为%d\n", i);
@@ -93,13 +98,16 @@ int get_node_list(node* head)
 
 
 // 获得元素
-elem_type get_node_value(node* head,int pos,elem_type value)
+elem_type get_node_value(node* head,int pos)
 {
+	node* head_1 = head;
 	int i = 1;
-	while (i <= pos)
+	while (i < pos && head_1)
 	{
-		head = head->next;
+		head_1 = head_1->next;
 		i++;
 	}
-	return head->value;
+	if (head_1 == NULL || i != pos)
+		return;
+	return head_1->value;
 }
