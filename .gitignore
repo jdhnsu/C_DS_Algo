@@ -53,3 +53,5 @@ dkms.conf
 /.vs/Project2
 *.tlog
 *.tlog
+*.recipe
+*.tlog

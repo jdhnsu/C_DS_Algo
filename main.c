@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "array_stack.h"
-#include "sq_list.h"
+#include "linked_list_stack.h"
 
 int main(void)
 {
@@ -26,14 +25,13 @@ int main(void)
     //mer_ge_sq_list(L,N);
     //print_sq_list(L);
     //printf("L->length:[%d]\n", L->length);
-
-
-    // Õ»²âÊÔ
-    array_stack* stack = init_array_stack();
-    push_array_stack(stack, 1);
-    push_array_stack(stack, 2);
-    push_array_stack(stack, 3);
-    print_array_stack(stack);
+    stack_linked* head = init_stack_linked();
+    push_stack_linked(head, 1);
+    push_stack_linked(head, 2);
+    push_stack_linked(head, 3);
+    print_linked(head);
+    pop_stack_linked(head);
+    print_linked(head);
     printf("Hello World!\n");
     system("pause");
     return 0;
