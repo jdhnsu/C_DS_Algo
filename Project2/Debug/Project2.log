@@ -1,3 +1,0 @@
-﻿  array_stack.c
-C:\code\lencode\Project2\array_stack.c(13,5): warning C4013: “memset”未定义；假设外部返回 int
-  Project2.vcxproj -> C:\code\lencode\Project2\Debug\Project2.exe

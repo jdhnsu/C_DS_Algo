@@ -11,7 +11,7 @@ typedef struct node
 typedef struct address_node
 {
     int n;
-    node* p;
+    elem_type * p;
 }address_node;
 
 
@@ -25,7 +25,7 @@ void delete_node(node* n);
 void replace_node (node* n, elem_type value);
 
 // 插入节点
-void insert_node(node* head, elem_type value);
+void insert_node(node* head,node *new_node);
 
 //访问节点
 int get_node(node* n);
@@ -35,6 +35,12 @@ address_node *find_node(node* head, elem_type value);
 
 // 打印链表
 void print_node_list(node* head);
+
+// get length of linked list
+int get_node_list(node* head);
+
+// 获的
+elem_type get_node_value(node* head,int pos);
 
 #endif 
 
