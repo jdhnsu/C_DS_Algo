@@ -61,7 +61,10 @@ int main(void)
 //    print_node_list(q1);
 //    delete_node(q2);
 //    print_node_list(q1);
+ 
 
+
+  // queue_test();
   array_queue *q = init_array_queue();
   push_array_queue(q, 1);
   push_array_queue(q, 2);
