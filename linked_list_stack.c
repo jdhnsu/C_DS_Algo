@@ -42,3 +42,11 @@ int pop_stack_linked(stack_linked* s)
 	tmp = NULL;
 	return flog;
 }
+void print_linked(stack_linked* s) {
+	stack_node* L = s->top;
+	while (L != NULL) {
+		printf("%d", L->value);
+		L = L->next;
+	}
+	printf("\n");
+}

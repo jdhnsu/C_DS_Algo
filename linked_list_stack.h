@@ -23,6 +23,8 @@ void push_stack_linked(stack_linked* s, elem_type value);
 
 // ³öÕ»
 int pop_stack_linked(stack_linked* s);
+//Êä³ö
+void print_linked(stack_linked* s);
 
 
 
