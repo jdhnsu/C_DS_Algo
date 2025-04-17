@@ -56,3 +56,7 @@ dkms.conf
 *.recipe
 *.tlog
 /Project2
+*.tlog
+*.tlog
+Project2/Debug/Project2.tlog/link.read.1.tlog
+Project2/Debug/Project2.tlog/link.secondary.1.tlog
