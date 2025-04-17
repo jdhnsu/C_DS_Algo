@@ -50,7 +50,7 @@ void push_array_queue(array_queue *q, elem_type value)
     if (full_array_queue(q))
         {printf("error: queue is full[From push_queue]"); return;}
     q->data[q->rear] = value;
-    q->rear = (q->front + q->size +1) % MAX_QUEUE;
+    q->rear = (q->front + q->size + 1) % MAX_QUEUE;
     q->size++;
 } 
 
@@ -73,11 +73,13 @@ void print_array_queue(array_queue *q)
             printf("error :\n");
             return ;
         }
+    int j = q->front;
     for (int i=0;i<q->size;i++)
         {
             printf("[");
-            printf("%d ",q->data[i%MAX_QUEUE]);
+            printf("%d ",q->data[j%MAX_QUEUE]);
             printf("]\n");
+            j++;
         }
 }
 
