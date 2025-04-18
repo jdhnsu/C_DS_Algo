@@ -57,3 +57,8 @@ dkms.conf
 *.recipe
 *.tlog
 *.log
+*.vcxproj
+*.filters
+Project2.vcxproj.filters
+*.filters
+*.vcxproj

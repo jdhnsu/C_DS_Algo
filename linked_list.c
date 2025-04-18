@@ -73,11 +73,14 @@ address_node *find_node(node* head, elem_type value)
 void print_node_list(node* head)
 {
 	node* head_1 = head;
-	printf("[%d ",head_1->value);
-	while (head_1->next != NULL)
+	//printf("[%d ",head_1->value);
+	printf("[");
+	while (1)
 	{
-		head_1 = head_1->next;
 		printf("%d ", head_1->value);
+		head_1 = head_1->next;
+		if (head_1 == NULL)
+			break;
 	}
 	printf("]\n");
 }
