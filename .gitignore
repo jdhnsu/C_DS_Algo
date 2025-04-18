@@ -62,3 +62,5 @@ dkms.conf
 Project2.vcxproj.filters
 *.filters
 *.vcxproj
+Project2.vcxproj
+Project2.vcxproj.filters
