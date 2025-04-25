@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "linked_queue.h"
+
+
+
+
+
 
 int main(void)
 {
@@ -98,7 +104,7 @@ int main(void)
   printf("----------\n");
   push_array_queue(q, 666);
   print_array_queue(q);*/
-  /*  link_queue* q = init_link_queue();
+   /* link_queue* q = init_link_queue();
     push_link_queue(q, 1);
     push_link_queue(q, 2);
     push_link_queue(q, 3);

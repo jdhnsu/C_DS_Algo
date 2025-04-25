@@ -33,6 +33,9 @@
     <ClCompile Include="sq_list.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="linked_queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sq_list.h">
@@ -48,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="array_queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
