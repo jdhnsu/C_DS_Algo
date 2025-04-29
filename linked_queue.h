@@ -12,7 +12,7 @@ typedef struct linked_queue
 {
    struct node* front;
    struct node* rear;
-    int size;
+   int size;
 }link_queue;
 
 // ≥ı ºªØ
