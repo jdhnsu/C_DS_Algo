@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="array_queue.c" />
     <ClCompile Include="array_stack.c" />
+    <ClCompile Include="binary_tree.c" />
     <ClCompile Include="linked_list.c" />
     <ClCompile Include="linked_list_stack.c" />
     <ClCompile Include="linked_queue.c" />
@@ -30,6 +31,7 @@
   <ItemGroup>
     <ClInclude Include="array_queue.h" />
     <ClInclude Include="array_stack.h" />
+    <ClInclude Include="binary_tree.h" />
     <ClInclude Include="linked_list.h" />
     <ClInclude Include="linked_list_stack.h" />
     <ClInclude Include="linked_queue.h" />
