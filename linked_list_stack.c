@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include "linked_list_stack.h"
 
-// ³õÊ¼Õ»
+// ï¿½ï¿½Ê¼Õ»
 stack_linked* init_stack_linked(void)
 {
 	stack_linked* s = (stack_linked*)malloc(sizeof(stack_linked));
 	if (s == NULL)
 	{
-		printf("ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+		printf("ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½\n");
 		return NULL;
 	}
 	s->top = NULL;
@@ -16,13 +16,13 @@ stack_linked* init_stack_linked(void)
 	return s;
 }
 
-// ÈëÕ»
+// ï¿½ï¿½Õ»
 void push_stack_linked(stack_linked* s, elem_type value)
 {
 	stack_node* node = (stack_node*)malloc(sizeof(stack_node));
 	if (node == NULL)
 	{
-		printf("ÄÚ´æ·ÖÅäÊ§°Ü£¡\n");
+		printf("ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½\n");
 		return NULL;
 	}
 	node->value = value;
@@ -31,7 +31,7 @@ void push_stack_linked(stack_linked* s, elem_type value)
 	s->size++;
 }
 
-// ³öÕ»
+// ï¿½ï¿½Õ»
 int pop_stack_linked(stack_linked* s)
 { 
 	int flog = 0;
