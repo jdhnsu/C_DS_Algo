@@ -59,3 +59,12 @@ void traverse_tree(tree_node *roots)
        front = (front+1) % 3;
     }
 }
+// dfs遍历
+void traverse_tree_dfs(tree_node *roots)
+{
+   if (roots == NULL)         
+        return;
+    printf("%d\n",roots->value);
+    traverse_tree_dfs(roots->left);
+    traverse_tree_dfs(roots->right); 
+}

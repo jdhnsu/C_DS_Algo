@@ -114,7 +114,7 @@ int main(void) {
   node1->right = node4;
   node2->left = node5;
   node2->right = node6;
-  traverse_tree(root);
+  traverse_tree_dfs(root);
   printf("Hello World!\n");
   system("pause");
   return 0;
