@@ -21,11 +21,7 @@ OBJ_EXT = .o
 
 # 定义源文件列表
 SRC_FILES = \
-    array_queue.c \
-    array_stack.c \
-    linked_list_stack.c \
-    linked_list.c \
-    sq_list.c \
+    heap.c \
     main.c
 
 # 使用正则表达式替换源文件后缀为.o，生成目标文件列表

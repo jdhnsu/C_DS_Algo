@@ -1,7 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "binary_tree.h"
+#include "heap.h"
 int main(void) {
 
   // sq_list* L = init_sq_list();
@@ -101,20 +102,34 @@ int main(void) {
     pop_link_queue(q);
     print_link_queue(q);*/
   
-  tree_node *root = init_binary_tree(1);
-  tree_node *node1 = init_binary_tree(2);
-  tree_node *node2 = init_binary_tree(3);
-  tree_node *node3 = init_binary_tree(4);
-  tree_node *node4 = init_binary_tree(5);
-  tree_node *node5 = init_binary_tree(6);
-  tree_node *node6 = init_binary_tree(7);
-  root->left = node1;
-  root->right = node2;
-  node1->left = node3;
-  node1->right = node4;
-  node2->left = node5;
-  node2->right = node6;
-  traverse_tree(root);
+  //tree_node *root = init_binary_tree(1);
+  //tree_node *node1 = init_binary_tree(2);
+  //tree_node *node2 = init_binary_tree(3);
+  //tree_node *node3 = init_binary_tree(4);
+  //tree_node *node4 = init_binary_tree(5);
+  //tree_node *node5 = init_binary_tree(6);
+  //tree_node *node6 = init_binary_tree(7);
+  //root->left = node1;
+  //root->right = node2;
+  //node1->left = node3;
+  //node1->right = node4;
+  //node2->left = node5;
+  //node2->right = node6;
+  //traverse_tree(root);
+
+
+
+// heap
+heap* tree = heap_init();
+int flog_s = 0;
+scanf("%d", &flog_s);
+for (int i = 1; i <= flog_s; i++)
+{
+    heap_push(tree, i);
+}
+heap_print(tree, 0);
+
+
   printf("Hello World!\n");
   system("pause");
   return 0;
