@@ -15,4 +15,5 @@ void insert_tree_node(tree_node *node,tree_node *node_new);
 void delete_node(tree_node *node);
 // 遍历树节点
 void traverse_tree(tree_node *roots);
+void traverse_tree_dfs(tree_node *roots);
 #endif // DEBUG
