@@ -41,7 +41,8 @@ void traverse_tree(tree_node *roots)
         printf("error: roots is NULL\n");
         return;
     }
-    while(roots)
+    printf("%d\n", roots->value);
+    while(roots ->left !=  NULL && roots -> right != NULL)
     {
       tree_node *temp[2] = {roots->left,roots->right};
       for (int i = 0;i<2;i++)
@@ -53,7 +54,17 @@ void traverse_tree(tree_node *roots)
             printf("%d ",temp[i]->value);
             }
         }
+       printf("\n");
        roots = queue[front];
        front = (front+1) % 3;
     }
+}
+// dfs遍历
+void traverse_tree_dfs(tree_node *roots)
+{
+   if (roots == NULL)         
+        return;
+    printf("%d\n",roots->value);
+    traverse_tree_dfs(roots->left);
+    traverse_tree_dfs(roots->right); 
 }
