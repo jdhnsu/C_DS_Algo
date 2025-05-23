@@ -58,46 +58,37 @@ void heap_push(heap *tree,int val)
 
 void heap_print(heap* tree,int root)
 {
-    int queue[3] = {0};
-    int font = root;
-    int rear = font+1;
-    int flog = 1;
-    printf("[%d]\n",tree->data[root]);
-    while (flog < tree->size)
+    if (tree->size <= 0) return;
+    
+    int* queue = (int*)malloc(tree->size * sizeof(int));
+    int front = 0;
+    int rear = 1;
+    int count = 1;
+    queue[0] = root;
+    printf("[%d]\n", tree->data[root]);
+
+    while (front < rear && count < tree->size)
     {
-        int flog_r = 0,flog_l = 0;
-        for (int i = 0;i<2;i++)
-            {
-               switch (i)
-               {
-               case 0:
-               flog_l= heap_get_left(tree,queue[font]);
-                if (flog_l > tree->size)
-                    {
-                        continue;
-                    }
-                queue[rear] = flog_l;
-                rear = (rear+1) % 3;
-                printf("[%d]",tree->data[flog_l]);
-                flog++;
-                break;
-                case 1:
-                flog_r = heap_get_right(tree,queue[font]);
-                if (flog_r > tree->size)
-                    {
-                        continue;
-                    }
-                queue[rear] = flog_r;
-                rear = (rear+1) % 3;
-                printf("[%d]",tree->data[flog_r]);
-                flog++;
-                break; 
-               default:
-                break;
-               }
-            } 
-            printf("\n");
-            font = (font+1) % 3;
+        int level_size = rear - front;
+        for (int i = 0; i < level_size && count < tree->size; i++)
+        {
+            int current = queue[front++];
+            int left = heap_get_left(tree, current);
+            int right = heap_get_right(tree, current);
+
+            if (left < tree->size) {
+                printf("[%d]", tree->data[left]);
+                queue[rear++] = left;
+                count++;
+            }
+            if (right < tree->size) {
+                printf("[%d]", tree->data[right]);
+                queue[rear++] = right;
+                count++;
+            }
+        }
+        printf("\n");
     }
+    free(queue);
 }
  
