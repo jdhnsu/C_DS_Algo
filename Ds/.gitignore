@@ -50,7 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-/.vs/Project2
+.vs/
 .vscode/
 *.tlog
 *.tlog

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
-// ³õÊ¼¸³Öµ
+// åˆå§‹èµ‹å€¼
 node* init_node(elem_type value)
 {
 	node* new_node = (node*)malloc(sizeof(node));
@@ -16,7 +16,7 @@ node* init_node(elem_type value)
 	return new_node;
 }
 
-// É¾³ýÏÂÒ»¸ö½Úµã
+// åˆ é™¤ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
 void delete_node(node* n)
 {
 	if (n->next != NULL) {
@@ -26,31 +26,31 @@ void delete_node(node* n)
 	}
 }
 
-// Ìæ»»½ÚµãÖµ
+// æ›¿æ¢èŠ‚ç‚¹å€¼
 void replace_node(node* n, elem_type value)
 {
 	n->value = value;
 }
 
-// ²åÈë½Úµã
+// æ’å…¥èŠ‚ç‚¹
 void insert_node(node* head,node *new_node)
 {
 	new_node->next = head->next;
 	head->next = new_node;
 }
 
-// ·ÃÎÊ½Úµã
+// è®¿é—®èŠ‚ç‚¹
 int get_node(node* n)
 {
 	return n->value;
 }
 
-// ²éÕÒ
+// æŸ¥æ‰¾
 address_node *find_node(node* head, elem_type value)
 {
 	address_node* n = (address_node*)malloc(sizeof(address_node));
 	if (n == NULL) {
-		printf("ÄÚ´æ·ÖÅäÊ§°Ü\n");
+		printf("å†…å­˜åˆ†é…å¤±è´¥\n");
 		return NULL;
 	}
 	n->n = 1;
@@ -64,12 +64,12 @@ address_node *find_node(node* head, elem_type value)
 		temp = temp->next;
 		n->p = temp;
 	}
-	printf("ÎÞ·¨ÕÒµ½½Úµã\n");
+	printf("æ— æ³•æ‰¾åˆ°èŠ‚ç‚¹\n");
 	free(n);
 	return NULL;
 }
 
-// ´òÓ¡Á´±í
+// æ‰“å°é“¾è¡¨
 void print_node_list(node* head)
 {
 	node* head_1 = head;
@@ -85,7 +85,7 @@ void print_node_list(node* head)
 	printf("]\n");
 }
 
-// »ñµÃÁ´±í³¤¶È
+// èŽ·å¾—é“¾è¡¨é•¿åº¦
 int get_node_list(node* head)
 {
 	node *head_1 = head;
@@ -95,12 +95,12 @@ int get_node_list(node* head)
 		head_1 = head_1->next;
 		i++;
 	}
-	printf("Á´±í³¤¶ÈÎª%d\n", i);
+	printf("é“¾è¡¨é•¿åº¦ä¸º%d\n", i);
 	return i;
 }
 
 
-// »ñµÃÔªËØ
+// èŽ·å¾—å…ƒç´ 
 elem_type get_node_value(node* head,int pos)
 {
 	node* head_1 = head;

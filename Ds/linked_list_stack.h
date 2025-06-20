@@ -15,15 +15,15 @@ typedef struct stack_linked
 	  int size;
 }stack_linked;
 
-// ³õÊ¼Õ»
+// åˆå§‹æ ˆ
 stack_linked* init_stack_linked(void);
 
-// ÈëÕ»
+// å…¥æ ˆ
 void push_stack_linked(stack_linked* s, elem_type value);
 
-// ³öÕ»
+// å‡ºæ ˆ
 int pop_stack_linked(stack_linked* s);
-//Êä³ö
+//è¾“å‡º
 void print_linked(stack_linked* s);
 
 

@@ -15,31 +15,31 @@ typedef struct address_node
 }address_node;
 
 
-// ³õÊ¼»¯½Úµã
+// åˆå§‹åŒ–èŠ‚ç‚¹
 node* init_node(elem_type value);
 
-// É¾³ıÏÂÒ»¸ö½Úµã
+// åˆ é™¤ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
 void delete_node(node* n);
 
-// Ìæ»»½Úµã
+// æ›¿æ¢èŠ‚ç‚¹
 void replace_node (node* n, elem_type value);
 
-// ²åÈë½Úµã
+// æ’å…¥èŠ‚ç‚¹
 void insert_node(node* head,node *new_node);
 
-//·ÃÎÊ½Úµã
+//è®¿é—®èŠ‚ç‚¹
 int get_node(node* n);
 
-// ²éÕÒ
+// æŸ¥æ‰¾
 address_node *find_node(node* head, elem_type value);
 
-// ´òÓ¡Á´±í
+// æ‰“å°é“¾è¡¨
 void print_node_list(node* head);
 
 // get length of linked list
 int get_node_list(node* head);
 
-// »ñµÄ
+// è·çš„
 elem_type get_node_value(node* head,int pos);
 
 #endif 

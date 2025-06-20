@@ -16,7 +16,7 @@ link_queue* init_link_queue()
 	return q;
 }
 
-// 入队
+// 鍏ラ槦
 void push_link_queue(link_queue* q, elem_type value)  
 {  
    node* new_node = (node*)malloc(sizeof(node));  
@@ -40,7 +40,7 @@ void push_link_queue(link_queue* q, elem_type value)
    q->size++;  
 }
 
-// 出队
+// 鍑洪槦
 elem_type pop_link_queue(link_queue* q)
 {
 	if (empty_link_queue(q))
@@ -56,7 +56,7 @@ elem_type pop_link_queue(link_queue* q)
 }
 
 
-// 判空
+// 鍒ょ┖
 int empty_link_queue(link_queue* q)
 {
 	if (q->size == 0)
@@ -70,7 +70,7 @@ int empty_link_queue(link_queue* q)
 }
 
 
-// 打印
+// 鎵撳嵃
 int print_link_queue(link_queue* q)
 {
 	if (empty_link_queue(q))

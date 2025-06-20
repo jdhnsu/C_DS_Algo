@@ -7,16 +7,16 @@ typedef struct array_stack
 	elem_type data[MAX_S];
 	int top;
 }array_stack;
-// ³õÊ¼Õ»
+// åˆå§‹æ ˆ
 array_stack* init_array_stack(void);
 
-// ÈëÕ»
+// å…¥æ ˆ
 void push_array_stack(array_stack* s, elem_type value);
 
-// ³öÕ»
+// å‡ºæ ˆ
 int pop_array_stack(array_stack* s);
 
-// ´òÓ¡Êı×éÕ»
+// æ‰“å°æ•°ç»„æ ˆ
 void print_array_stack(array_stack* s);
 
 #endif 

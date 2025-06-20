@@ -15,19 +15,19 @@ typedef struct linked_queue
    int size;
 }link_queue;
 
-// ³õÊ¼»¯
+// åˆå§‹åŒ–
 link_queue* init_link_queue();
 
-// Èë¶Ó
+// å…¥é˜Ÿ
 void push_link_queue(link_queue* q, elem_type value);
 
-// ³ö¶Ó
+// å‡ºé˜Ÿ
 elem_type pop_link_queue(link_queue* q);
 
-// ÅĞ¿Õ
+// åˆ¤ç©º
 int empty_link_queue(link_queue* q);
 
-// ´òÓ¡
+// æ‰“å°
 int print_link_queue(link_queue* q);
 
 
