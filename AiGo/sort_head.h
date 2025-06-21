@@ -16,4 +16,8 @@ void shell_sort(elem_t *nums,int len);
 // 打印数组
 void _print(elem_t *nums,int len);
 
+// 快速排序
+void quick_sort(elem_t *nums,int len,int index_l,int index_r);
+int partition(elem_t *nums,int len,int index_l,int index_r);
+
 #endif // SORT_HEAD_H

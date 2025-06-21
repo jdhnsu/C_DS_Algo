@@ -17,11 +17,6 @@ void _print(elem_t *nums,int len)
     }
 }
 
-// void insert_sort(elem_t *nums,int len);
-// void bubble_sort(elem_t *nums,int len);
-// void select_sort(elem_t *nums,int len);
-// void shell_sort(elem_t *nums,int len);
-
 void insert_sort(elem_t *nums,int len)
 {
     int j,i;
@@ -84,7 +79,6 @@ void shell_sort(elem_t *nums,int len)
     {
         int j,i;
         int cont = 0;
-        int flog = 0;
         for (i=0;i<len;i+=gap[k])
         {
             if (i+gap[k]<len&&nums[i]>nums[i+gap[k]])
@@ -99,4 +93,27 @@ void shell_sort(elem_t *nums,int len)
             }
         }
     }
+}
+// pivot
+void quick_sort(elem_t *nums,int len,int index_l,int index_r)
+{
+    if (index_l >= index_r)
+        return;
+    int index_p = partition(nums,len,index_l,index_r);
+    quick_sort(nums,len,index_l,index_p-1);
+    quick_sort(nums,len,index_p+1,index_r);
+}
+int partition(elem_t *nums, int len, int index_l, int index_r)
+{
+    elem_t pivot = nums[index_l];
+    int left = index_l;
+    int right = index_r;
+    while (left < right) {
+        while (left < right && nums[right] >= pivot) right--;
+        nums[left] = nums[right];
+        while (left < right && nums[left] <= pivot) left++;
+        nums[right] = nums[left];
+    }
+    nums[left] = pivot;
+    return left;
 }
