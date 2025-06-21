@@ -7,6 +7,8 @@
 void _print(elem_t *nums,int len);
 // 交换elem_t类型的两个数
 void swap(elem_t *x,elem_t *y);
+// 中位数
+int median(int x,int y,int z);
 /*-----------------------------*/
 
 // 简单插入排序

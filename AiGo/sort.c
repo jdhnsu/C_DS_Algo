@@ -17,6 +17,15 @@ void _print(elem_t *nums,int len)
     }
 }
 
+int median(int x,int y,int z)
+{
+    if ((x>y&&x<z)||(x>z&&x<y))
+         return x;
+    if ((y>x&&y<z)||(y>z&&y<x))
+        return y;
+    return z;
+}
+
 void insert_sort(elem_t *nums,int len)
 {
     int j,i;
@@ -94,7 +103,7 @@ void shell_sort(elem_t *nums,int len)
         }
     }
 }
-// pivot
+
 void quick_sort(elem_t *nums,int len,int index_l,int index_r)
 {
     if (index_l >= index_r)
@@ -105,6 +114,8 @@ void quick_sort(elem_t *nums,int len,int index_l,int index_r)
 }
 int partition(elem_t *nums, int len, int index_l, int index_r)
 {
+    int med = median(index_l,index_r,(index_l+index_r)/2);
+    swap(&nums[med],&nums[index_l]); //基准数优化
     elem_t pivot = nums[index_l];
     int left = index_l;
     int right = index_r;
