@@ -65,3 +65,6 @@ Project2.vcxproj.filters
 Project2.vcxproj
 Project2.vcxproj.filters
 main.c
+desktop.ini
+*.xml
+.idea/
