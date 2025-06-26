@@ -3,6 +3,13 @@
         "stdio.h": "c",
         "concepts": "c",
         "type_traits": "c",
-        "sort_head.h": "c"
+        "sort_head.h": "c",
+        "stdlib.h": "c",
+        "cstdlib": "c",
+        "array_queue.h": "c",
+        "string.h": "c",
+        "queue_a.h": "c",
+        "typeinfo": "c",
+        "sq_list.h": "c"
     }
 }
